@@ -1,8 +1,8 @@
 #' S3 class MeanVar_portfolio
 #'
 #'
-#' Class MeanVar_portfolio is designed to contain mean-variance portfolios with provided
-#' estimators of the mean vector, covariance matrix, and inverse covariance matrix.
+#' Class MeanVar_portfolio is designed to construct mean-variance portfolios
+#' with provided estimators of the mean vector, covariance matrix, and inverse covariance matrix.
 #' It includes the following elements:
 #'
 #' @section Slots:
@@ -12,7 +12,7 @@
 #' | call | the function call with which it was created |
 #' | cov_mtrx | the sample covariance matrix of the asset returns |
 #' | inv_cov_mtrx | the inverse of the sample covariance matrix |
-#' | means | sample mean vector estimate of the asset returns |
+#' | means | sample mean vector of the asset returns |
 #' | weights | portfolio weights |
 #' | Port_Var | portfolio variance |
 #' | Port_mean_return | expected portfolio return |

@@ -4,7 +4,7 @@
 #' see \code{\link{MVShrinkPortfolio}}.
 #'
 #' @inheritParams MVShrinkPortfolio
-#' @param b a numeric variable. The target for weight shrinkage.
+#' @param b a numeric variable. The weights of the target portfolio.
 #' @param beta a numeric variable. The confidence level for weight intervals.
 #' @return an object of class MeanVar_portfolio with subclass MV_portfolio_weights_BDOPS21.
 #'
@@ -13,19 +13,19 @@
 #' | call | the function call with which it was created |
 #' | cov_mtrx | the sample covariance matrix of the asset returns |
 #' | inv_cov_mtrx | the inverse of the sample covariance matrix |
-#' | means | sample mean vector estimate of the asset returns |
-#' | W_mv_hat | sample estimate of the portfolio weights |
-#' | weights | shrinkage estimate of the portfolio weights |
+#' | means | sample mean vector of the asset returns |
+#' | W_mv_hat | sample estimator of the portfolio weights |
+#' | weights | shrinkage estimator of the portfolio weights |
 #' | alpha | shrinkage intensity for the weights |
 #' | Port_Var | portfolio variance |
 #' | Port_mean_return | expected portfolio return |
 #' | Sharpe | portfolio Sharpe ratio |
-#' | weight_intervals | A data frame |
+#' | weight_intervals | A data frame, see details |
 #'
-#' weight_intervals contains a shrinkage estimate of portfolio weights,
-#' asymptotic confidence intervals for the true portfolio weights, value of test
-#' statistic and a p-value of the test on the equality of the weight of each individual
-#' asset to zero (see Section 4.3 of Bodnar, Dette, Parolya and Thorsen 2021).
+#' weight_intervals contains a shrinkage estimator of portfolio weights,
+#' asymptotic confidence intervals for the true portfolio weights, value of the test
+#' statistic and the p-value of the test on the equality of the weight of each individual
+#' asset to zero (see Section 4.3 of Bodnar, Dette, Parolya and Thorsén 2021).
 #' @md
 #'
 #' @references \insertRef{BDOPS2021}{HDShOP}
@@ -136,11 +136,11 @@ new_MV_portfolio_weights_BDOPS21 <- function(x, gamma, b, beta){
 
 #' Constructor of GMV portfolio object.
 #'
-#' Constructor of global minimum variance portfolios. For more details of the method,
+#' Constructor of global minimum variance portfolio. For more details of the method,
 #' see \code{\link{MVShrinkPortfolio}}.
 #'
 #' @inheritParams MVShrinkPortfolio
-#' @param b a numeric vector. The target for weight shrinkage.
+#' @param b a numeric vector. The weights of the target portfolio.
 #' @inheritParams new_MV_portfolio_weights_BDOPS21
 #' @return an object of class MeanVar_portfolio with subclass GMV_portfolio_weights_BDPS19.
 #'
@@ -150,17 +150,17 @@ new_MV_portfolio_weights_BDOPS21 <- function(x, gamma, b, beta){
 #' | cov_mtrx | the sample covariance matrix of the asset returns |
 #' | inv_cov_mtrx | the inverse of the sample covariance matrix |
 #' | means | sample mean vector estimate of the asset returns |
-#' | w_GMVP | sample estimate of portfolio weights |
-#' | weights | shrinkage estimate of portfolio weights |
+#' | w_GMVP | sample estimator of portfolio weights |
+#' | weights | shrinkage estimator of portfolio weights |
 #' | alpha | shrinkage intensity for the weights |
 #' | Port_Var | portfolio variance |
 #' | Port_mean_return | expected portfolio return |
 #' | Sharpe | portfolio Sharpe ratio |
 #' | weight_intervals | A data frame, see details |
 #'
-#' weight_intervals contains a shrinkage estimate of portfolio weights,
-#' asymptotic confidence intervals for the true portfolio weights, value of test
-#' statistic and a p-value of the test on the equality of the weight of each
+#' weight_intervals contains a shrinkage estimator of portfolio weights,
+#' asymptotic confidence intervals for the true portfolio weights, the value of test
+#' statistic and the p-value of the test on the equality of the weight of each
 #' individual asset to zero \insertCite{@see Section 4.3 of @BDNT21}{HDShOP}.
 #' @md
 #'

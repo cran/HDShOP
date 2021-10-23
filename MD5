@@ -1,11 +1,11 @@
-8f759e09b15fab24f9957bdd1c1909b6 *DESCRIPTION
+451a12651ca469835a0ecb17cbd4c58c *DESCRIPTION
 8322571e00e61c6ae2723d85dcd1d791 *NAMESPACE
-178ca48fe890d599fd40ea02931dbe6c *NEWS.md
+0a32a6e37952bc0ed7d9b15757226a47 *NEWS.md
 03e84e3a3c63124d2d6f3d543a2b9454 *R/BDOPS_2020.R
 1e51f123ca72687586a83255b9351b64 *R/BOP_2019.R
 91db440644dd27f6af32310c15efa126 *R/Class_ExUtil_portfolio.R
 84f0a916f6fbac0d6352b4ad536af2cf *R/HDShOP-package.R
-3d492032dd88d65df4b25ebff213e4a9 *R/Matrix_shrink.R
+7b32e791828a61f7881c549835cd1663 *R/Matrix_shrink.R
 c35814e8111463393bd013b157458578 *R/Mean_shrink.R
 6fd3f252daad11927df3ea5a2735f578 *R/Plot_frontier.R
 3dda027dac891b7a437f3d6d2ed8df5f *R/S3_custom_portfol.R
@@ -14,8 +14,8 @@ c35814e8111463393bd013b157458578 *R/Mean_shrink.R
 074ada4e009e4b1a2f9270ce083bfabe *R/T_alpha_statistics.R
 815276e31d8850ff0920cf4390240879 *R/data.R
 f05203b27f060f51af8a288b970692e3 *R/dispatchers.R
-3c0568ca3e8a80a1f6cc1bd157a94bac *R/random_cov_matrix.R
-e1d17fade5ce50679c38f2abbcadf92b *build/partial.rdb
+9e28d674b717a9b7ef79629fbe4bf581 *R/random_cov_matrix.R
+06ae4808c5a8084ed17de67e6b19a5db *build/partial.rdb
 99df28b0b9247122b234ddba8d9ad59b *data/SP_daily_asset_returns.RData
 8e17f52e447aadb62726c36f176158ba *inst/REFERENCES.bib
 8afd7b1e2f030de6bec7368656e4c89c *man/Class_MeanVar_portfolio.Rd
@@ -26,7 +26,7 @@ a357861b21159c4b66489c9c0ce2b2a9 *man/InvCovShrinkBGP16.Rd
 3b443a296d085c9e30fe63c29aa4c9b9 *man/MVShrinkPortfolio.Rd
 b8deebb051aaa0b6001a0d447db432ba *man/MeanEstim.Rd
 8fc32c425a013af480384c300e6824e5 *man/MeanVar_portfolio.Rd
-0c57d64aab98bd4ef56cccdd651e478e *man/RandCovMtrx.Rd
+5b54ae5a4f762a5a720e6041449fba7e *man/RandCovMtrx.Rd
 e3fb0e2ebc78ad2a2d78bf0987dfc84f *man/SP_daily_asset_returns.Rd
 fbb1d31380c5123f3f5cb32fc880b4cb *man/Sigma_sample_estimator.Rd
 247a54e8caebc897cf3708480bb3d5cb *man/mean_bop19.Rd

@@ -109,6 +109,13 @@ validate_MeanVar_portfolio <- function(w) {
     )
   }
 
+  if (nrow(values$cov_mtrx)!=ncol(values$cov_mtrx)) {
+    stop(
+      "The covariance matrix is not square",
+      call. = FALSE
+    )
+  }
+
   w
 }
 
@@ -123,7 +130,7 @@ validate_MeanVar_portfolio <- function(w) {
 #' \eqn{\hat Q} is given by
 #' \deqn{\hat Q = \hat{\Sigma}^{-1} - \frac{\hat{\Sigma}^{-1} 1 1' \hat{\Sigma}^{-1}}{1' \hat{\Sigma}^{-1} 1} .}
 #' The computation is made by \code{\link{new_MeanVar_portfolio}} and the result
-#' is validated by 
+#' is validated by
 #' \code{\link{validate_MeanVar_portfolio}}.
 #'
 #' @param mean_vec mean vector of asset returns provided in the form of a vector or a list.
@@ -147,7 +154,8 @@ validate_MeanVar_portfolio <- function(w) {
 MeanVar_portfolio <- function(mean_vec, cov_mtrx, gamma){
 
   cov_mtrx <- as.matrix(cov_mtrx)
-  mean_vec<-unlist(mean_vec)
+  mean_vec <- unlist(mean_vec)
+  if(!is.numeric(mean_vec)) stop("mean_vec seems to contain non-numbers")
 
   xx <- new_MeanVar_portfolio(mean_vec=mean_vec,
                               cov_mtrx=cov_mtrx,
@@ -166,5 +174,25 @@ summary.MeanVar_portfolio <- function(object, ...){
        Port_mean_return=object$Port_mean_return,
        Sharpe=object$Sharpe
        )
+}
+
+
+# Plot method for MeanVar_portfolio
+#' @export
+plot.MeanVar_portfolio <- function(x, y=NULL, ...){
+
+  weights <- x$weights
+  ww <- sort(weights)
+  graphics::barplot(ww, xlab="sorted assets", ylab="weight")
+
+  mm<- x$means
+  graphics::barplot(mm, xlab="assets", ylab="mean")
+
+  Cmat <- x$cov_mtrx
+  mat1 <- apply(Cmat, 2, rev)
+  mat2 <- t(mat1)
+
+  graphics::image(mat2)
+
 }
 

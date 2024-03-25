@@ -1,10 +1,11 @@
 #' Traditional mean-variance portfolio
 #'
-#' Mean-variance portfolios with the traditional (sample) estimators for the mean
-#' vector and the covariance matrix of asset returns. For more details of the method,
-#' see \code{\link{MVShrinkPortfolio}}. new_MV_portfolio_traditional is for the
-#' case p<n, while new_MV_portfolio_traditional_pgn is for p>n, where p is the
-#' number of assets and n is the number of observations.
+#' Mean-variance portfolios with the traditional (sample) estimators for
+#' the mean vector and the covariance matrix of asset returns.
+#' For more details of the method, see \code{\link{MVShrinkPortfolio}}.
+#' new_MV_portfolio_traditional is for the case p<n, while
+#' new_MV_portfolio_traditional_pgn is for p>n, where p is the number of
+#' assets and n is the number of observations.
 #'
 #' @inheritParams MVShrinkPortfolio
 #' @return an object of class MeanVar_portfolio
@@ -22,9 +23,9 @@
 #' @md
 #'
 #' @examples
-#' n<-3e2 # number of realizations
-#' p<-.5*n # number of assets
-#' gamma<-1
+#' n <- 3e2 # number of realizations
+#' p <- .5*n # number of assets
+#' gamma <- 1
 #'
 #' x <- matrix(data = rnorm(n*p), nrow = p, ncol = n)
 #'
@@ -41,7 +42,8 @@ new_MV_portfolio_traditional <- function(x, gamma){
   n <- ncol(x)
   means <- .rowMeans(x, m=p, n=n)
   I_vect <- rep(1, times=p)
-  Q_n_hat <- invSS - (invSS %*% I_vect %*% t(I_vect) %*% invSS)/as.numeric(t(I_vect) %*% invSS %*% I_vect)
+  Q_n_hat <- invSS - (invSS %*% I_vect %*% t(I_vect) %*% invSS)/
+                     as.numeric(t(I_vect) %*% invSS %*% I_vect)
 
   # Portfolio weights
   W_EU_hat <- as.vector(
@@ -79,7 +81,8 @@ new_MV_portfolio_traditional_pgn <- function(x, gamma){
   cov_mtrx <- Sigma_sample_estimator(x)
   invSS <- MASS::ginv(cov_mtrx)
   I_vect <- rep(1, times=p)
-  Q_n_hat <- invSS - (invSS %*% I_vect %*% t(I_vect) %*% invSS)/as.numeric(t(I_vect) %*% invSS %*% I_vect)
+  Q_n_hat <- invSS - (invSS %*% I_vect %*% t(I_vect) %*% invSS)/
+                     as.numeric(t(I_vect) %*% invSS %*% I_vect)
 
   # Portfolio weights
   W_EU_hat <- as.vector(

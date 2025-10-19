@@ -1,6 +1,6 @@
 Package: HDShOP
 Title: High-Dimensional Shrinkage Optimal Portfolios
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: 
     c(person(given = "Taras", 
              family = "Bodnar", 
@@ -24,11 +24,12 @@ Authors@R:
              role = "aut",
              comment = c(ORCID = "0000-0003-2147-2288")))
 Maintainer: Dmitry Otryakhin <d.otryakhin.acad@protonmail.ch>
-Author: Taras Bodnar [aut] (<https://orcid.org/0000-0001-7855-8221>),
-  Solomiia Dmytriv [aut] (<https://orcid.org/0000-0003-1855-3044>),
-  Yarema Okhrin [aut] (<https://orcid.org/0000-0003-4704-5233>),
-  Dmitry Otryakhin [aut, cre] (<https://orcid.org/0000-0002-4700-7221>),
-  Nestor Parolya [aut] (<https://orcid.org/0000-0003-2147-2288>)
+Author: Taras Bodnar [aut] (ORCID: <https://orcid.org/0000-0001-7855-8221>),
+  Solomiia Dmytriv [aut] (ORCID: <https://orcid.org/0000-0003-1855-3044>),
+  Yarema Okhrin [aut] (ORCID: <https://orcid.org/0000-0003-4704-5233>),
+  Dmitry Otryakhin [aut, cre] (ORCID:
+    <https://orcid.org/0000-0002-4700-7221>),
+  Nestor Parolya [aut] (ORCID: <https://orcid.org/0000-0003-2147-2288>)
 Description: Constructs shrinkage estimators of high-dimensional mean-variance portfolios and performs 
     high-dimensional tests on optimality of a given portfolio. The techniques developed in 
     Bodnar et al. (2018 <doi:10.1016/j.ejor.2017.09.028>, 2019 <doi:10.1109/TSP.2019.2929964>, 
@@ -47,10 +48,12 @@ LazyData: yes
 Encoding: UTF-8
 Depends: R (>= 3.5.0)
 Imports: Rdpack, lattice
-Suggests: ggplot2, testthat, EstimDiagnostics, MASS, corpcor, waldo
+Suggests: ggplot2, testthat (>= 3.0.0), EstimDiagnostics, MASS,
+        corpcor, waldo
 RdMacros: Rdpack
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
+Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2024-03-24 22:18:04 UTC; otryakhin-d
+Packaged: 2025-10-19 15:49:08 UTC; d
 Repository: CRAN
-Date/Publication: 2024-03-25 05:50:02 UTC
+Date/Publication: 2025-10-19 16:10:02 UTC

@@ -1,6 +1,6 @@
-6992a725f6e05d174fd762a2c527dedf *DESCRIPTION
+c12b730242df20ec99d36ee7cc585394 *DESCRIPTION
 83944e6df7877619acfdd2acc8fd7d1d *NAMESPACE
-bcae46b0427f62de52718d528d99f386 *NEWS.md
+6d70a4d52bce074ed3f0e0712568fefb *NEWS.md
 b1b72126fa9351e9fb0d60d156a29279 *R/BDOPS_2020.R
 879aa97f9b4c09aab0fa57138502d103 *R/BOP_2019.R
 9f03db87bde8950846a1f2a8e411007e *R/Class_ExUtil_portfolio.R
@@ -16,10 +16,10 @@ a577cd10664e3a8dfc4b026320c23b08 *R/case_c_gr_1.R
 fc2ce8a4de2709a4a49c777eff0d76ea *R/data.R
 1e158148cce13d7da59786b62a3238f6 *R/dispatchers.R
 1cd42589b3e88a9b7c162f0f727e9af4 *R/random_cov_matrix.R
-e93965cb6e5ba5d8a4f477f58bd92355 *build/partial.rdb
+3ee61d52fcef7407859ead2090813ade *build/partial.rdb
 99df28b0b9247122b234ddba8d9ad59b *data/SP_daily_asset_returns.RData
 8aeea0388d1b3fbc2fe18009608bb72e *inst/CITATION
-3372b4ba1758b958a1492b701f39ee3f *inst/REFERENCES.bib
+9bb5cd25767a418a7a9b23714bfede55 *inst/REFERENCES.bib
 1135edc525e2a50b9793ef31adc8a94f *man/Class_MeanVar_portfolio.Rd
 d19cb8b383f3b28394aa5cc135ece678 *man/CovShrinkBGP14.Rd
 2d4b2d10ef84f553fcc5de7687730f55 *man/CovarEstim.Rd
@@ -43,6 +43,7 @@ bfda050ae05279e6e0efa2bda01a4d50 *man/mean_bop19.Rd
 1aacb5c6d97baade317d1f9826f141b2 *man/test_MVSP.Rd
 a8403aba5cecd49b4b747ed98f93f506 *man/validate_MeanVar_portfolio.Rd
 23a656207c71ca0a6009ed0a9cd0224b *tests/testthat.R
+7c68f0a9a9bcdd6c9205025c93273d0a *tests/testthat/Rplots.pdf
 372a01575bdfc1c820eed38150b0e062 *tests/testthat/test_CovarEstim.R
 9125ef379b46ffadfa79edf15d4eca8b *tests/testthat/test_EU_vs_GMV.R
 9184ea7eb3a29fe5990868e0189d9f97 *tests/testthat/test_MVShrinkportfolio.R
